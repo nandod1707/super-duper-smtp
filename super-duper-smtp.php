@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Super Duper SMTP
  * Plugin URI:        https://github.com/nandod1707/super-duper-smtp/
- * Description:       A crazy easy to use SMTP plugin for Wordpress.
+ * Description:       A crazy simple SMTP plugin for Wordpress.
  * Version:           1.0.0
  * Author:            Nando Delgado
  * Author URI:        https://github.com/nandod1707/super-duper-smtp/
