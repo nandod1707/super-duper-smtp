@@ -173,6 +173,7 @@ class Super_Duper_Smtp {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_public, 'replace_phpmailer' );
 
 	}
 

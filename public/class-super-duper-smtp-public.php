@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://github.com/nandod1707/super-duper-smtp
  * @since      1.0.0
  *
  * @package    Super_Duper_Smtp
@@ -18,8 +18,66 @@
  *
  * @package    Super_Duper_Smtp
  * @subpackage Super_Duper_Smtp/public
- * @author     Your Name <email@example.com>
+ * @author     Nando Delgado <nando.emmanuel@gmail.com>
  */
+
+ // Load PHPMailer class, so we can subclass it.
+
+require_once ABSPATH . WPINC . '/class-phpmailer.php';
+
+/**
+ * Subclass of PHPMailer to prevent Sending.
+ *
+ * This subclass of PHPMailer replaces the send() method
+ * with a method that does not send.
+ * This subclass is based on the WP Core MockPHPMailer
+ * found in phpunit/includes/mock-mailer.php
+ *
+ * @since 0.8.0
+ * @see PHPMailer
+ */
+class Fe_Stop_Emails_Fake_PHPMailer extends PHPMailer {
+	/**
+	 * Mock sent email.
+	 *
+	 * @since 1.0.0
+	 * @var array of email components (e.g. to, cc, etc.)
+	 */
+	var $mock_sent = array();
+
+	/**
+	 * Replacement send() method that does not send.
+	 *
+	 * Unlike the PHPMailer send method,
+	 * this method never calls the method postSend(),
+	 * which is where the email is actually sent
+	 *
+	 * @since 1.0.0
+	 * @return bool
+	 */
+	function send() {
+		try {
+			if ( ! $this->preSend() ) {
+				return false;
+			}
+
+			$mock_email = array(
+				'to'     => $this->to,
+				'cc'     => $this->cc,
+				'bcc'    => $this->bcc,
+				'header' => $this->MIMEHeader,
+				'body'   => $this->MIMEBody,
+			);
+
+			$this->mock_sent[] = $mock_email;
+
+			return true;
+		} catch ( phpmailerException $e ) {
+			return false;
+		}
+	}
+}
+
 class Super_Duper_Smtp_Public {
 
 	/**
@@ -99,5 +157,35 @@ class Super_Duper_Smtp_Public {
 		wp_enqueue_script( $this->super_duper_smtp, plugin_dir_url( __FILE__ ) . 'js/super-duper-smtp-public.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+	/**
+	 * Replace the global $phpmailer with fake phpmailer.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return Fe_Stop_Emails_Fake_PHPMailer instance, the object that replaced
+	 *                                                 the global $phpmailer
+	 */
+	public function replace_phpmailer() {
+		global $phpmailer;
+		return $this->replace_w_fake_phpmailer( $phpmailer );
+	}
+
+	/**
+	 * Replace the parameter object with an instance of
+	 * Fe_Stop_Emails_Fake_PHPMailer.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param PHPMailer $obj WordPress PHPMailer object.
+	 * @return Fe_Stop_Emails_Fake_PHPMailer $obj
+	 */
+	public function replace_w_fake_phpmailer( &$obj = null ) {
+		$obj = new Fe_Stop_Emails_Fake_PHPMailer;
+
+		return $obj;
+	}
+
+
 
 }
