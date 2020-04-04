@@ -38,9 +38,14 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'SUPER_DUPER_SMTP_VERSION', '1.0.0' );
 
 /**
+ * Add the plugin menu page
+ */
+
+/**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-super-duper-smtp-activator.php
  */
+
 function activate_super_duper_smtp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-super-duper-smtp-activator.php';
 	Super_Duper_Smtp_Activator::activate();
@@ -50,6 +55,7 @@ function activate_super_duper_smtp() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-super-duper-smtp-deactivator.php
  */
+
 function deactivate_super_duper_smtp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-super-duper-smtp-deactivator.php';
 	Super_Duper_Smtp_Deactivator::deactivate();

@@ -29,6 +29,7 @@ class Super_Duper_Smtp_Activator {
 	 *
 	 * @since    1.0.0
 	 */
+
 	public static function activate() {
 
 	}
