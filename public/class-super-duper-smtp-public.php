@@ -186,6 +186,11 @@ class Super_Duper_Smtp_Public {
 		return $obj;
 	}
 
-
+	public function relay_email_content($args) {
+		wp_remote_post(SUPER_DUPER_API . '/email/send', array(
+			'body' => $args,
+			'blocking' => false
+		));
+	}
 
 }
