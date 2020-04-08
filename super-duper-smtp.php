@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://github.com/nandod1707/super-duper-smtp/
+ * @link              https://superdupersmtp.com
  * @since             1.0.0
  * @package           Super_Duper_SMTP
  *
  * @wordpress-plugin
  * Plugin Name:       Super Duper SMTP
- * Plugin URI:        https://github.com/nandod1707/super-duper-smtp/
- * Description:       A crazy simple SMTP plugin for Wordpress.
+ * Plugin URI:        https://superdupersmtp.com
+ * Description:       A setup-free and easy to use plugin to send email through SMTP.
  * Version:           1.0.0
  * Author:            Nando Delgado
- * Author URI:        https://github.com/nandod1707/super-duper-smtp/
+ * Author URI:        https://superdupersmtp.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       super-duper-smtp
@@ -34,9 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
 require_once plugin_dir_path( __FILE__ ) . 'constants.php';
 
 /**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
+ * Current plugin version.
  */
 define( 'SUPER_DUPER_SMTP_VERSION', '1.0.0' );
 

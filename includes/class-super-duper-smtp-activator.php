@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       https://superdupersmtp.com
  * @since      1.0.0
  *
  * @package    Super_Duper_Smtp
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Super_Duper_Smtp
  * @subpackage Super_Duper_Smtp/includes
- * @author     Your Name <email@example.com>
+ * @author     Nando Delgado <nando.emmanuel@gmail.com>
  */
 class Super_Duper_Smtp_Activator {
 

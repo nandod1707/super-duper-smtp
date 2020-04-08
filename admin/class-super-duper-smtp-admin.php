@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://github.com/nandod1707/super-duper-smtp/
+ * @link       https://superdupersmtp.com
  * @since      1.0.0
  *
  * @package    Super_Duper_Smtp

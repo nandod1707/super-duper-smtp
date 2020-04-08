@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       http://example.com
+ * @link       https://superdupersmtp.com
  * @since      1.0.0
  *
  * @package    Super_Duper_Smtp

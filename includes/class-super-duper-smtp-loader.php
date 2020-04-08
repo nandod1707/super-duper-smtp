@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       https://superdupersmtp.com
  * @since      1.0.0
  *
  * @package    Super_Duper_Smtp
