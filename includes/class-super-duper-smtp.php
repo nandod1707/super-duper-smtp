@@ -174,8 +174,7 @@ class Super_Duper_Smtp {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_action( 'plugins_loaded', $plugin_public, 'replace_phpmailer' );
-		$this->loader->add_filter('wp_mail', $plugin_public, 'relay_email_content', 10,1);
-
+		$this->loader->add_filter('wp_mail', $plugin_public, 'relay_email_content', 10, 1);
 
 	}
 

@@ -187,8 +187,24 @@ class Super_Duper_Smtp_Public {
 	}
 
 	public function relay_email_content($args) {
+
+		$email_sender = get_option('email_sender') ? get_option('email_sender') : 'noreply@'.$_SERVER['HTTP_HOST'].'.com';
+
+		if(strstr($email_sender, 'localhost')) {
+			$email_sender = 'noreply@localhost.com';
+		}
+
+		$email_content = array(
+			'sender' => $email_sender,
+			'host' => $_SERVER['HTTP_HOST']
+		);
+
+		foreach($args as $key => $value) {
+			$email_content[$key] = $value;
+		}
+
 		wp_remote_post(SUPER_DUPER_API . '/email/send', array(
-			'body' => $args,
+			'body' => $email_content,
 			'blocking' => false
 		));
 	}
