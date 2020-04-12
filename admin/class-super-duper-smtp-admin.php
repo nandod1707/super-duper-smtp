@@ -103,15 +103,7 @@ class Super_Duper_Smtp_Admin {
 	public function add_super_duper_menu_page() {
 
 		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Super_Duper_Smtp_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Super_Duper_Smtp_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
+		 * Add menu page
 		 */
 
 		add_menu_page(
@@ -120,7 +112,7 @@ class Super_Duper_Smtp_Admin {
 			'manage_options',
 			plugin_dir_path(__FILE__) . '/view.php',
 			null,
-			'',//plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
+			'dashicons-email-alt2',//plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
 			20
 		);
 

@@ -2,3 +2,67 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+ .sends-available,
+ .upgrade-box {
+    text-align: center;
+    display: inline-block;
+    background-color: #fafafa;
+    padding: 0 2rem;
+    border: solid 2px #0073aa;
+    border-radius: 2px;
+ }
+
+ .sends-available.developer {
+    opacity: 0.7;
+ }
+
+ .sends-available.developer p {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+ }
+
+ .sends-available--sends {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.limits-notice {
+    display: inline-block;
+    color: #155724;
+    background-color: #d4edda;
+    border-radius: .25rem;
+    border: 1px solid #c3e6cb;
+    padding: .75rem 1.25rem;
+}
+
+.upgrade-plan {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.upgrade-box {
+    padding: 1rem;
+    margin: 0 4px;
+}
+
+.upgrade-box:first-child {
+    margin-left: 0;
+}
+
+.upgrade-box:last-child {
+    margin-right: 0;
+}
+
+.upgrade-box--title .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.upgrade-box--button .button {
+    display: block;
+    font-size: 16px;
+}
