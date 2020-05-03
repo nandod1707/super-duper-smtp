@@ -41,7 +41,8 @@ $sends_available = $sends_available->data
             <p class="description">Send or receive up to 100 emails per month.</p>
         </div>
         <div class="upgrade-box--button">
-            <a href="" class="button">$1.49/month</a>
+            
+            <a href="https://secure.2checkout.com/checkout/buy?merchant=250327353196&tpl=one-column&prod=SD100&qty=1" target="_blank" class="button">$1.49/month</a>
         </div>
     </div>
     <div class="upgrade-box">
@@ -52,7 +53,7 @@ $sends_available = $sends_available->data
             <p class="description">Send or receive up to 200 emails per month.</p>
         </div>
         <div class="upgrade-box--button">
-            <a href="" class="button">$2.49/month</a>
+            <a href="https://secure.2checkout.com/checkout/buy?merchant=250327353196&tpl=one-column&prod=SD200&qty=1" target="_blank" class="button">$2.49/month</a>
         </div>
     </div>
     <div class="upgrade-box">
@@ -63,7 +64,7 @@ $sends_available = $sends_available->data
             <p class="description">Send or receive up to 500 emails per month.</p>
         </div>
         <div class="upgrade-box--button">
-            <a href="" class="button">$4.49/month</a>
+            <a href="https://secure.2checkout.com/checkout/buy?merchant=250327353196&tpl=one-column&prod=SD500&qty=1" target="_blank" class="button">$4.49/month</a>
         </div>
     </div>
 </div>
