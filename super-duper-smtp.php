@@ -18,7 +18,7 @@
  * Description:       A setup-free and easy to use plugin to send email through SMTP.
  * Version:           1.0.0
  * Author:            Nando Delgado
- * Author URI:        https://superdupersmtp.com
+ * Author URI:        http://github.com/nandod1707
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       super-duper-smtp
