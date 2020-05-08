@@ -20,3 +20,14 @@ The free version of this plugin supports up to 10 emails per month per domain, w
 1. Install the plugin through the 'Add New' page in the plugins menu or download the .zip file and extract it to wp-content/plugins.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go into the Super Duper SMTP menu on the sidebar and turn on "Send emails through SMTP"
+
+== Use of Third Party Services ==
+
+Super Duper SMTP relies on an external API currently found at https://super-duper-smtp.herokuapp.com/. This is an API developed for Super Duper SMTP that takes care of.
+
+- Creating user accounts
+- Upgrading and downgrading user accounts
+- Finding user accounts and checking for sends available
+- Sending emails through the Sendgrid SMTP relay
+
+You can find more information on the data we receive and how it's used at https://superdupersmtp.com/privacy-policy.
