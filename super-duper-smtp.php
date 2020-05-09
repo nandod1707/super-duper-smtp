@@ -16,7 +16,7 @@
  * Plugin Name:       Super Duper SMTP
  * Plugin URI:        https://superdupersmtp.com
  * Description:       A setup-free and easy to use plugin to send email through SMTP.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Nando Delgado
  * Author URI:        http://github.com/nandod1707
  * License:           GPL-2.0+
