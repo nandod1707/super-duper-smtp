@@ -3,7 +3,7 @@ Contributors: nandod1707
 Tags: gmail smtp, sendgrid smtp, smtp, wp smtp, wpmail, mailer, email, transactional, phpmailer
 Requires at least: 3.0.1
 Tested up to: 5.4.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,9 @@ Super Duper SMTP relies on an external API currently found at https://api.superd
 You can find more information on the data we receive and how it's used on our [privacy policy](https://superdupersmtp.com/privacy-policy/).
 
 == Changelog ==
+= 1.0.3 =
+* Corrected issue not creating user accounts on plugin activation
+
 = 1.0.2 =
 * Upadted API URL after migration to prevent error messages from sleeping dev server
 * Corrected installation description
