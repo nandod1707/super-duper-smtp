@@ -32,6 +32,12 @@ class Super_Duper_Smtp_Activator {
 
 	public static function activate() {
 
+		$sends_available = wp_remote_post(SUPER_DUPER_API . '/users/available', array(
+			'body' => array(
+				'host' => $_SERVER['HTTP_HOST']
+			)
+		));
+
 	}
 
 }
